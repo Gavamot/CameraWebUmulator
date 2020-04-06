@@ -92,7 +92,7 @@ namespace Infrastructure.Rep
         private async Task SleepRandom()
         {
             var rnd = new Random(dateTime.Now.Millisecond);
-            int sleepMs = rnd.Next(config.MinGetSnapshotDelayMs, config.MaxGetSnaphotDelayMs);
+            int sleepMs = rnd.Next(config.MinGetSnapshotDelayMs, config.MaxGetSnapshotDelayMs);
             await Task.Delay(sleepMs);
         }
 

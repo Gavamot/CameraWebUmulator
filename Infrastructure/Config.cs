@@ -8,6 +8,6 @@ namespace Infrastructure
     public class Config : IConfig
     {
         public int MinGetSnapshotDelayMs { get; set; }
-        public int MaxGetSnaphotDelayMs { get; set; }
+        public int MaxGetSnapshotDelayMs { get; set; }
     }
 }

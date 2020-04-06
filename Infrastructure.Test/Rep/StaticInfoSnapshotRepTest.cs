@@ -15,7 +15,7 @@ namespace Infrastructure.Test
         }
 
         [Test]
-        public async Task GetSnaphot_Works()
+        public async Task GetSnapshot_Works()
         {
             var snapshot = await rep.GetSnapshot();
             Assert.IsNotNull(snapshot);
