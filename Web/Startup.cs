@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Infrastructure;
+using Microsoft.AspNetCore.Http;
 
 namespace Web
 {
@@ -51,6 +52,10 @@ namespace Web
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapGet("/", async context =>
+                {
+                    await context.Response.WriteAsync("<a href=\"/Snapshot/GetSnapshot\">Snapshot/GetSnapshot</a>");
+                });
                 endpoints.MapControllers();
             });
         }
